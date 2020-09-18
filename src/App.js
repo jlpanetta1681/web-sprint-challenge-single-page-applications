@@ -1,47 +1,43 @@
-import React from "react";
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Form from "./components/Form";
-import Home from "./components/Home";
-
-
+import Form from './components/Form';
+import Home from './components/Home';
 
 const App = () => {
-  return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>Welcome To Lambda Eats, Lets Make A Pizza</p>
-    
-        <Router>
-      <div className="App">
-      </div>
+	return (
+		<>
+			<h1>Lambda Eats</h1>
+			<p>Welcome To Lambda Eats, Lets Make A Pizza</p>
 
-      <nav className="navbar">
-        <Link to="/">
-          <button name='home'>Home</button>
-        </Link>
+			<Router>
+				<div className="App"></div>
 
-      <br />       
-      <Link to="/form">
-        <button name='order'>Order</button>
-      </Link>
-      </nav>
+				<nav className="navbar">
+					<Link to="/">
+						<button name="home">Home</button>
+					</Link>
 
-      <div className="App-header">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/form" component={Form} />
-          <Route path="/order"
-          render={props => {
-            return null
-          }}
-          />
-        </Switch>
-      </div>
-      </Router>
-     </>
+					<br />
+					<Link to="/form">
+						<button name="order">Order</button>
+					</Link>
+				</nav>
 
-
-  );
+				<div className="App-header">
+					<Switch>
+						<Route exact path="/" component={Home} />
+						<Route path="/form" component={Form} />
+						<Route
+							path="/order"
+							render={(props) => {
+								return null;
+							}}
+						/>
+					</Switch>
+				</div>
+			</Router>
+		</>
+	);
 };
 export default App;
