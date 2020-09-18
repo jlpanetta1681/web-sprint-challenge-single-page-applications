@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Form from "./componenets/Form";
+import Form from "./components/Form";
 import Home from "./components/Home";
 
 
@@ -11,8 +11,7 @@ const App = () => {
     <>
       <h1>Lambda Eats</h1>
       <p>Welcome To Lambda Eats, Lets Make A Pizza</p>
-    </>
-
+    
         <Router>
       <div className="App">
       </div>
@@ -40,6 +39,7 @@ const App = () => {
         </Switch>
       </div>
       </Router>
+     </>
 
 
   );
